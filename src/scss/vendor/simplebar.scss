@@ -1,0 +1,43 @@
+.simplebar-content-wrapper {
+  overflow-x: hidden !important;
+}
+
+.simplebar-track.simplebar-horizontal {
+  display: none;
+}
+
+.simplebar-scrollbar {
+  min-height: 10px;
+}
+
+.simplebar-scrollbar.simplebar-visible {
+  &::before {
+    border-radius: 10px;
+    opacity: 0.5;
+    transition: $transition;
+    background-color: $accent;
+  }
+}
+
+.simplebar-track.simplebar-vertical {
+  width: 10px;
+  right: -2px;
+}
+
+.simplebar-hover {
+
+  .simplebar-scrollbar {
+    &::before {
+      opacity: 0.8;
+    }
+  }
+}
+
+.simplebar-dragging {
+  .simplebar-scrollbar.simplebar-visible {
+    &::before {
+      opacity: 1;
+      transition: $transition;
+    }
+  }
+}

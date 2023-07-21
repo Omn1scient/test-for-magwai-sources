@@ -1,0 +1,37 @@
+//@import "theme/bootstrap";
+
+@import "fonts";
+@import "colors/colors";
+@import "theme/mixins";
+@import "global/global";
+@import "misc/misc";
+
+:root {
+	--mobile-padding: 15px;
+	--tablet-padding: 40px;
+	--desktop-padding: 40px;
+}
+
+html,
+body {
+	min-width: 360px;
+	width: 100%;
+	font-family: montserrat, 'Arial', sans-serif;
+	background-color: $body-bg;
+	color: $text-main;
+	font-size: 14px;
+	line-height: 24px;
+	font-weight: 400;
+}
+
+@import "components/components";
+
+@import "blocks/header";
+@import "blocks/first-screen";
+@import "blocks/cards";
+@import "blocks/modal";
+
+p {
+	font-size: 1em;
+}
+

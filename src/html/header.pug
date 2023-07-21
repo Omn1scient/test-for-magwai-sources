@@ -1,0 +1,25 @@
+- let mainNavigation = [{title: 'Услуги', link: '/'},{title: 'Абонементы', link: '/'},{title: 'Почему мы', link: '/'},{title: 'Оборудование', link: '/'},{title: 'Акции', link: '/'},{title: 'FAQ', link: '/'},{title: 'Контакты', link: '/'}]
+
+header.header
+	.container
+		.header__content
+			.header__hamburger.hamburger
+				.hamburger__line
+			a.header__logo(href='/')
+				img(src='img/icons/header-logo.svg' alt='Логотип компании')
+
+			nav.header__nav-main
+				ul.list-style-none
+					each item in mainNavigation
+						li
+							a(href=item.link)= item.title
+			nav.header__nav-buttons
+				a.header__call-btn.btn.btn--icon.btn--skew(href='tel:')
+					img(src='img/svg/phone-icon.svg' alt="Позвонить по телефону")
+					span.visually-hidden Позвонить
+				a.header__callback-btn.btn.btn--accent.btn--skew(href='#callbackModal' data-toggle='modal') Оставить заявку
+
+	.mobile-overlay
+		.container
+			.mobile-overlay__content
+

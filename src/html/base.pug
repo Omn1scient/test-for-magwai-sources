@@ -1,0 +1,14 @@
+- let lang = 'ru'
+
+doctype html
+html(lang=lang)
+	include head
+	body
+		include header
+
+		main
+			block content
+
+		include modal
+		include footer
+		script(src='js/app.js')

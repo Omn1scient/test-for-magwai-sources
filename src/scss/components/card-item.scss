@@ -1,0 +1,140 @@
+.card-item {
+  background-color: #fff;
+  color: #171717;
+  display: flex;
+  flex-direction: column;
+
+  &:hover {
+    .card-item__header {
+      img {
+        transform: scale3d(1.05,1.05,1);
+        transition: all .3s ease;
+      }
+    }
+  }
+}
+
+.card-item__header {
+  height: calc(42.25vw * 1.22);
+  width: 100%;
+  overflow: hidden;
+
+  @media (min-width: 576px) {
+    height: calc(22.25vw * 1.22);
+  }
+
+  @media (min-width: 768px) {
+    height: calc(20.25vw * 1.20);
+    max-height: 260px;
+  }
+
+  @media (min-width: 992px) {
+    max-height: 200px;
+  }
+
+  @media (min-width: 1800px) {
+    max-height: 186px;
+  }
+
+  img {
+    width: 100%;
+    object-fit: cover;
+    height: 100%;
+    transform: scale3d(1,1,1);
+    transition: all .3s ease;
+  }
+}
+
+.card-item__body {
+  padding: 26px 25px 30px 25px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+
+  @media (min-width: 768px) {
+    padding: 26px 25px 28.5px 25px;
+  }
+
+  @media (min-width: 1200px) {
+    padding: 26px 25px 30px 25px;
+  }
+}
+
+.card-item__title {
+  font-family: mulish, 'Arial', sans-serif;
+  font-weight: bold;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 1.3px;
+  margin-bottom: 22px;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+  overflow : hidden;
+
+  &.invisible {
+    opacity: 0;
+  }
+}
+
+.card-item__slogan {
+  font-size: 16px;
+  line-height: 26px;
+  max-width: calc(100% - 20px);
+  margin-bottom: 19px;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+  overflow : hidden;
+}
+
+.card-item__preview-text {
+  display: -webkit-box;
+  -webkit-line-clamp: 6;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+  overflow : hidden;
+  margin-bottom: 0;
+  margin-top: 0;
+  //height: 200px;
+
+  @media (min-width: 576px) {
+    -webkit-line-clamp: 3;
+  }
+
+  @media (min-width: 768px) {
+    -webkit-line-clamp: 5;
+  }
+
+  @media (min-width: 992px) {
+    -webkit-line-clamp: 3;
+  }
+
+  @media (min-width: 1800px) {
+    -webkit-line-clamp: 5;
+  }
+}
+
+.card-item__bottom {
+  margin-top: auto;
+}
+
+.card-item__post {
+  margin-top: 20px;
+  font-size: 12px;
+
+  @media (min-width: 768px) {
+    margin-top: 44px;
+  }
+}
+
+.card-item__btn {
+  margin-top: 25px;
+  width: 100%;
+  padding: 13px 30px;
+  font-family: mulish, 'Arial', sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+}

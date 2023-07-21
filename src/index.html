@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('html/head.html',{
+"title":"Главная"
+})
+<body>
+@@include('html/header.html',{})
+
+<main>
+  <h1>rfg2df1g</h1>
+
+  <input class="phoneMask" type="text">
+
+  <div class="row">
+    <div class="col-6">1</div>
+    <div class="col-6">2</div>
+  </div>
+
+
+  <button type="button" class="btn btn-primary">Primary</button>
+  <button type="button" class="btn btn-secondary">Secondary</button>
+  <button type="button" class="btn btn-success">Success</button>
+  <button type="button" class="btn btn-danger">Danger</button>
+  <button type="button" class="btn btn-warning">Warning</button>
+  <button type="button" class="btn btn-info">Info</button>
+  <button type="button" class="btn btn-light tag2">Light</button>
+  <button type="button" class="btn btn-dark tag">Dark</button>
+
+  <button type="button" class="btn btn-link">Link</button>
+  <button type="button" class="btn btn-dark-red-color">Link</button>
+
+
+
+  <!-- Button trigger modal -->
+  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalCallrequest">
+    Launch demo modal
+  </button>
+
+  <!-- Modal -->
+
+  <div class="modal callback fade" id="modalCallrequest" tabindex="-1" aria-labelledby="modalCallrequestLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-header__title">Заказать обратный звонок</h5>
+          <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 11 11"><path fill="#fff" d="M2.2 1.2l3.3 3.3L8.8 1.2C8.9 1.1 9.1 1 9.3 1 9.7 1 10 1.3 10 1.7c0 0.2-0.1 0.4-0.2 0.5L6.5 5.5 9.8 8.8C9.9 8.9 10 9.1 10 9.3 10 9.7 9.7 10 9.3 10c-0.2 0-0.4-0.1-0.5-0.2L5.5 6.5 2.2 9.8c-0.1 0.1-0.3 0.2-0.5 0.2C1.3 10 1 9.7 1 9.3 1 9.1 1.1 8.9 1.2 8.8L4.5 5.5 1.2 2.2C1.1 2.1 1 1.9 1 1.7 1 1.3 1.3 1 1.7 1 1.9 1 2.1 1.1 2.2 1.2z"/></svg>
+            </span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="modal__container">
+            <p class="subtitle">Заполните поля ниже и мы свяжемся с вами в ближайшее время!</p>
+            <form action="" class="callback__form">
+              <div class="row">
+                <div class="col-12">
+                  <div class="field-wrapper callback__form-name">
+                    <label for="">
+                      <input class="callback__input-name" type="text" id="input-name" placeholder="Ваше имя" required>
+                    </label>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <div class="field-wrapper callback__form-phone">
+                    <label for="">
+                      <input class="callback__input-phone phoneMask" type="text" id="input-phone" placeholder="Ваш телефон" required>
+                    </label>
+                  </div>
+                </div>
+                <div class="callback__form-col--button-wrapper col-12">
+                  <button type="submit" class="callback__submit-button font-weight-bold btn"><span>Заказать звонок</span></button>
+                </div>
+                <div class="col-12">
+                  <p class="callback__acceptance">
+                    Нажимая на кнопку «Заказать звонок», <br> вы соглашаетесь с <a href="#modalPolicy" data-bs-toggle="modal" data-bs-target="#modalPolicy">политикой конфиденциальности</a>.
+                  </p>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+@@include('html/footer.html',{})
+
+<script src="/js/app.js"></script>
+</body>
+</html>

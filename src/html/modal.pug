@@ -1,0 +1,24 @@
+section#callbackModal.modal.modal-callback.modal-shown1
+	h6.modal-callback__title Оставить заявку
+	p.modal-callback__description Заполните все поля для отправки заявки
+	form.modal-callback__form(action='/' method='post')
+
+		.modal-callback__element-wrapper
+			label.visually-hidden(for='name') Ваше имя
+			input#name.modal-callback__input(type='text' name='name' placeholder='Ваше имя')
+
+		.modal-callback__element-wrapper
+			label.visually-hidden(for='phone') Номер телефона
+			input#phone.modal-callback__input(type='text' name='phone' placeholder='Номер телефона')
+
+		.modal-callback__element-wrapper
+			label.custom-checkbox-label
+				input(type='checkbox')
+				span.checkmark
+				span.modal-callback__agreement Я согласен с ополитикой обработки <a href="#"> "Персональных данных" </a>
+
+		button.modal-callback__modal-submit.btn(type='submit') Отправить
+	button.modal-callback__modal-close.modal-close-btn(type='button') Закрыть
+
+
+.overlay-modal
